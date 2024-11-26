@@ -6,6 +6,7 @@ Elaborado por Diana de Souza Vasconcelos.
 Algoritmo original:
 
 
+```
 function gerarAleatorios(quantidade){
   var vetor = [];
   var geracoes = [];
@@ -29,6 +30,7 @@ function main(quantidade){
   gerarAleatorios(quantidade);
   console.timeEnd("timer");
 }
+```
 
 
 O algoritmo fornecido utiliza um método que pode ser ineficiente para gerar números aleatórios únicos dentro de um intervalo, especialmente quando o número de elementos desejado (quantidade) se aproxima do tamanho do intervalo possível (neste caso, de 1 a 60). Isso ocorre porque esse método continua gerando números aleatórios indefinidamente, mesmo que os números restantes já tenham sido incluídos no vetor.
@@ -38,6 +40,7 @@ Pode-se melhorar a eficiência do algoritmo utilizando um conjunto (Set) para ev
 Algoritmo otimizado:
 
 
+```
 function gerarAleatoriosMelhorado(quantidade) {
   if (quantidade > 60) {
     throw new Error("Quantidade não pode ser maior que 60.");
@@ -62,7 +65,7 @@ function mainMelhorado(quantidade) {
   gerarAleatoriosMelhorado(quantidade);
   console.timeEnd("timer");
 }
-
+```
 
 
 Para comparar os dois algoritmos, pode-se realizar testes cronometrados para diferentes valores de quantidade.
